@@ -13,8 +13,8 @@ Counter.propTypes = {
   increment: PropTypes.func.isRequired
 }
 
-const mapStateToProps = (state, _) => ({
-  value: state
+const mapStateToProps = ({ count }, _) => ({
+  value: count
 });
 
 const mapDispatchToProps = (dispatch, _) => ({

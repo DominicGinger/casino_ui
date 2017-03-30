@@ -26,4 +26,11 @@ module.exports = {
       path.join(__dirname, 'node_modules'),
     ],
   },
+  devServer: {
+    contentBase: 'dist',
+    hot: true,
+    inline: true,
+    port: 3000,
+    historyApiFallback: true,
+  },
 };

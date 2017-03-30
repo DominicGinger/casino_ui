@@ -1,8 +1,7 @@
-export default (state = 0, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1;
-    default:
-      return state;
-  }
-}
+import { combineReducers } from 'redux';
+
+import countReducer from './count-reducer.js';
+
+export default combineReducers({
+  count: countReducer
+});
