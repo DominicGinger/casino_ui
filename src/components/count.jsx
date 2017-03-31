@@ -3,15 +3,9 @@ import styled from 'styled-components';
 
 import Button from '../components/button.jsx';
 
-export default props => {
-  const Style =  styled.h1`
-font-size: 1em;
-color: red;
-`;
-  return (
+export default props => (
     <div>
-      <Style>{props.count}</Style>
-      <Button label="Increment" onClick={props.increment} />
+      <p>{props.count}</p>
+      <Button type="" label="Increment" onClick={props.increment} />
     </div>
   );
-}

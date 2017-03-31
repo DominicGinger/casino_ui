@@ -4,18 +4,16 @@ import Count from '../components/count.jsx';
 
 class Counter extends Component {
   render() {
-    return Count({count: this.props.value, increment: this.props.increment });
+    return Count(this.props);
   }
 }
 
 Counter.propTypes = {
-  value: PropTypes.number.isRequired,
+  count: PropTypes.number.isRequired,
   increment: PropTypes.func.isRequired
 }
 
-const mapStateToProps = ({ count }, _) => ({
-  value: count
-});
+const mapStateToProps = ({ count }, _) => ({ count });
 
 const mapDispatchToProps = (dispatch, _) => ({
   increment: () => dispatch({type: 'INCREMENT'})

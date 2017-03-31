@@ -5,8 +5,8 @@ import { Provider } from 'react-redux';
 import { Router, Route } from 'react-router';
 import createHistory from 'history/createBrowserHistory'
 
-import Counter from './containers/counter.js';
 import reducers from './reducers';
+import Root from './root.js';
 
 const history = createHistory();
 
@@ -17,15 +17,10 @@ const store = createStore(
 );
 
 ReactDOM.render(
-  <div>
     <Provider store={store}>
       <Router history={history}>
-        <div>
-        <Route exact path="/" component={Counter}/>
-        <Route path="/counter" component={Counter}/>
-      </div>
+        <Root />
       </Router>
     </Provider>
-  </div>
   , document.getElementById('app'));
 
