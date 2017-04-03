@@ -16,7 +16,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 //import reducers
 
 import Layout from './components/layout.jsx';
-import Home from './components/home.jsx';
+import Home from './containers/home.js';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);
