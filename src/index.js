@@ -11,8 +11,11 @@ import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-ro
 
 import { composeWithDevTools } from 'redux-devtools-extension';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 //import reducers
 
+import Layout from './components/layout.jsx';
 import Home from './components/home.jsx';
 
 const history = createHistory();
@@ -28,9 +31,12 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <div>
-        <Route exact path="/" component={Home}/>
-      </div>
+      <MuiThemeProvider>
+        <div>
+          <Route path="/" component={Layout}/>
+          <Route exact path="/" component={Home}/>
+        </div>
+      </MuiThemeProvider>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('app')

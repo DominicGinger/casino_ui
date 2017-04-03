@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default props => {
   return (
@@ -8,9 +7,7 @@ export default props => {
         { JSON.stringify(props.state, null, 2) }
       </section>
       <section>
-        <ul>
-          <li><Link to="/roulette" >Roulette</Link></li>
-        </ul>
+        Welcome Home!
       </section>
     </div>
   );
