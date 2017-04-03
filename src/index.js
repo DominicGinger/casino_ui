@@ -13,18 +13,22 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-//import reducers
+import { Link } from 'react-router-dom';
+import { Tabs, Tab } from 'material-ui/Tabs';
+
+import reducers from './reducers';
 
 import Layout from './components/layout.jsx';
 import Home from './containers/home.js';
+import Counter from './containers/counter.js';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);
 
 const store = createStore(
-  combineReducers({
+  combineReducers(Object.assign({}, reducers, {
     router: routerReducer
-  }),
+  })),
   composeWithDevTools(applyMiddleware(middleware))
 );
 
@@ -33,12 +37,14 @@ ReactDOM.render(
     <ConnectedRouter history={history}>
       <MuiThemeProvider>
         <div>
-          <Route path="/" component={Layout}/>
+          <Route path="/" component={Layout} />
           <Route exact path="/" component={Home}/>
+          <Route exact path="/counter" component={Counter}/>
         </div>
       </MuiThemeProvider>
     </ConnectedRouter>
-  </Provider>,
+  </Provider>
+  ,
   document.getElementById('app')
 )
 

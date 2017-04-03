@@ -6,7 +6,7 @@ export default props => {
   return (
     <Tabs value={props.location.pathname}>
       <Tab value="/" label="Home" containerElement={<Link to="/" />} />
-      <Tab value="/1" label="Counter" containerElement={<Link to="/1" />} />
+      <Tab value="/counter" label="Counter" containerElement={<Link to="/counter" />} />
   </Tabs>
   );
 }

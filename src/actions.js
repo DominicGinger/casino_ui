@@ -1,7 +1,5 @@
-export const UserActions = {
-  NEW_USER: 'NEW_USER',
-  NAME_CHANGE: 'NAME_CHANGE',
-  CASH_CHANGE: 'CASH_CHANGE',
-  VALIDATE: 'VALIDATE'
+export const CounterActions = {
+  INCREMENT: 'INCREMENT',
+  DECREMENT: 'DECREMENT'
 };
 

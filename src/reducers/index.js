@@ -1,9 +1,5 @@
-import { combineReducers } from 'redux';
+import counterReducer from './counter-reducer.js';
 
-import countReducer from './count-reducer.js';
-import userReducer from './user-reducer.js';
-
-export default combineReducers({
-  count: countReducer,
-  user: userReducer
-});
+export default {
+  count: counterReducer
+};
