@@ -21,6 +21,7 @@ import reducers from './reducers';
 import Layout from './components/layout.jsx';
 import Home from './containers/home.js';
 import Counter from './containers/counter.js';
+import Roulette from './containers/roulette.js';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);
@@ -40,6 +41,7 @@ ReactDOM.render(
           <Route path="/" component={Layout} />
           <Route exact path="/" component={Home}/>
           <Route exact path="/counter" component={Counter}/>
+          <Route exact path="/roulette" component={Roulette}/>
         </div>
       </MuiThemeProvider>
     </ConnectedRouter>
