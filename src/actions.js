@@ -3,3 +3,7 @@ export const CounterActions = {
   DECREMENT: 'DECREMENT'
 };
 
+export const RouletteActions = {
+  SPIN: 'SPIN'
+};
+
